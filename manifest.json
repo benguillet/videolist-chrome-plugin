@@ -1,0 +1,26 @@
+{
+  "name": "moShare",
+  "description": "__MSG_description__",
+  "version": "1.2",
+  "default_locale": "en",
+  "permissions": [
+    "contextMenus", "tabs", "http://*/*", "https://*/*"
+  ],
+  "background_page": "background.html",
+  "browser_action": {
+    "default_title": "moShare this page",
+    "default_icon": "icons/moshare-19.png"
+  },
+  "icons": {
+    "16": "icons/moshare-16.png",
+    "48": "icons/moshare-48.png",
+    "128": "icons/moshare-128.png"
+  },
+  "content_scripts": [{
+      "all_frames": false,
+      "css": [ "css/moshare.css" ],
+      "js": [ "js/jquery.js", "js/underscore.js", "js/moshare-content-script.js" ],
+      "matches": [ "http://twitter.com/*", "https://twitter.com/*" ],
+      "run_at": "document_end"
+   }]
+}
