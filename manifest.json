@@ -1,26 +1,24 @@
 {
-  "name": "moShare",
+  "name": "videoList",
   "description": "__MSG_description__",
-  "version": "1.2",
+  "version": "1.0",
   "default_locale": "en",
   "permissions": [
     "contextMenus", "tabs", "http://*/*", "https://*/*"
   ],
+  // "content_scripts": [ {
+  //     "js": [ "js/jquery-1.7.2.min.js", "js/jquery.ogp.js","js/content-script.js"],
+  //     "matches": [ "http://*/*", "https://*/*" ]
+  //  }],
   "background_page": "background.html",
   "browser_action": {
-    "default_title": "moShare this page",
-    "default_icon": "icons/moshare-19.png"
+    "default_title": "videoList this page",
+    "default_icon": "icons/videolist-19.png",
+    "default_popup": "popup.html"
   },
   "icons": {
-    "16": "icons/moshare-16.png",
-    "48": "icons/moshare-48.png",
-    "128": "icons/moshare-128.png"
-  },
-  "content_scripts": [{
-      "all_frames": false,
-      "css": [ "css/moshare.css" ],
-      "js": [ "js/jquery.js", "js/underscore.js", "js/moshare-content-script.js" ],
-      "matches": [ "http://twitter.com/*", "https://twitter.com/*" ],
-      "run_at": "document_end"
-   }]
+    "16": "icons/videolist-16.png",
+    "48": "icons/videolist-48.png",
+    "128": "icons/videolist-128.png"
+  }
 }
